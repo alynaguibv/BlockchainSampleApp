@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+    <com.anychart.AnyChartView android:layout_width="0dp" android:layout_height="0dp"
+                               app:layout_constraintTop_toTopOf="parent"
+                               app:layout_constraintBottom_toBottomOf="parent"
+                               app:layout_constraintStart_toStartOf="parent"
+                               app:layout_constraintEnd_toEndOf="parent"
+                               android:id="@+id/anyChartView">
+
+    </com.anychart.AnyChartView>
+    <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            android:translationZ="2dp"/>
+
+    <tr.xip.errorview.ErrorView
+            android:id="@+id/specialErrorView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:ev_image="@drawable/error_view_cloud"
+            app:ev_retryVisible="true"
+            app:ev_imageSize="120dp"
+            app:ev_subtitleVisible="true"
+            app:ev_imageVisible="true"
+            app:ev_titleVisible="true"
+            app:ev_title="@string/msg_error_title"
+            app:ev_retryText="@string/btn_try_again"
+            android:visibility="gone"
+    />
+</android.support.constraint.ConstraintLayout>
