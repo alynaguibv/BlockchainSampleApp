@@ -12,14 +12,14 @@ Sample application to fetch and display average USD market price across major bi
 ### How to run the sample application locally
 
 - Preconditions: 
-1- Android SDK API level 28 is installed. for more information please refer to http://www.androiddocs.com/sdk/installing/index.html
-2- You have an Android Emulator/ Device to run the application.
-3- To create/ download an Android Virtual Device please refer to https://developer.android.com/studio/run/managing-avds
-4- "unzip" utility to be installed.
+1. Android SDK API level 28 is installed. for more information please refer to http://www.androiddocs.com/sdk/installing/index.html
+2. You have an Android Emulator/ Device to run the application.
+3. To create/ download an Android Virtual Device please refer to https://developer.android.com/studio/run/managing-avds
+4. "unzip" utility to be installed.
 
 - Steps: 
-1- Download the repository folder.
-2- Open terminal window then execute the following commands:
+1. Download the repository folder.
+2. Open terminal window then execute the following commands:
 ```script
 unzip BlockchainSampleApp.zip
 cd BlockchainSampleApp
