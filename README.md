@@ -6,4 +6,4 @@
 ### Description
 Sample application to fetch and display average USD market price across major bitcoin exchanges. 
 
-![image info](./documentation/img/screenshot_blockchain_stats.jpeg)
+![image info](./documentation/img/screenshot_blockchain_stats.jpg)

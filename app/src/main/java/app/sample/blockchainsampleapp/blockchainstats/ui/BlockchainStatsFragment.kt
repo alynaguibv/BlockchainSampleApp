@@ -20,7 +20,10 @@ import kotlinx.android.synthetic.main.fragment_blockchainstats.*
 import java.net.UnknownHostException
 import java.util.concurrent.CopyOnWriteArrayList
 
-
+/*
+* Fragment Block chain stats
+*
+* */
 class BlockchainStatsFragment : BaseFragment() {
 
     val TAG = "BlockchainStatsFragment"
@@ -78,18 +81,19 @@ class BlockchainStatsFragment : BaseFragment() {
                 val seriesData = CopyOnWriteArrayList<DataEntry>()
                 val chartPointsCon = CopyOnWriteArrayList(chartPoints)
                 val iterator = chartPointsCon.iterator()
+                val cartesian = AnyChart.line()
+                val factor = 1000000
                 while (iterator.hasNext()) {
                     val chartPoint = iterator.next()
-                    val x = chartPoint.x.toBigIntegerOrNull()
+                    val x = chartPoint.x.toIntOrNull()
                     val y = chartPoint.y.toFloatOrNull()
                     if (x != null && y != null) {
-                        val valueDataEntry = ValueDataEntry(x, y)
+                        val xFactor = x / factor
+                        val valueDataEntry = ValueDataEntry(xFactor, y)
                         seriesData.add(valueDataEntry)
                     }
                 }
-                val cartesian = AnyChart.line()
                 cartesian.animation(true)
-
                 cartesian.padding(2.0, 2.0, 2.0, 2.0)
 
                 cartesian.crosshair().enabled(true)
