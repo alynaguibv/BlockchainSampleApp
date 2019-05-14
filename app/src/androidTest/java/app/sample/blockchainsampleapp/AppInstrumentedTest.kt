@@ -17,27 +17,5 @@ import org.junit.Assert.*
  */
 @RunWith(AndroidJUnit4::class)
 class AppInstrumentedTest {
-    @Test
-    fun useAppContext() {
-        // Context of the app under test.
-        val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("app.sample.blockchainsampleapp", appContext.packageName)
-    }
 
-    @Test
-    fun assertFetchBlockchainStatsResponseIsNotNull(){
-        val requestManager = RequestManager.getInstance()
-        val fetchBlockchainStatsRequest = FetchBlockchainStatsRequest()
-        requestManager.start(fetchBlockchainStatsRequest)
-        assertNotNull(fetchBlockchainStatsRequest.response)
-    }
-
-    @Test
-    fun assertFetchBlockchainStatsResponseIsNull(){
-        val requestManager = RequestManager.getInstance()
-        val fetchBlockchainStatsRequest = FetchBlockchainStatsRequest()
-        fetchBlockchainStatsRequest.baseURL = ""
-        requestManager.start(fetchBlockchainStatsRequest)
-        assertNull(fetchBlockchainStatsRequest.response)
-    }
 }

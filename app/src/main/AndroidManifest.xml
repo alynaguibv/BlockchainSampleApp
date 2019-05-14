@@ -12,7 +12,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:hardwareAccelerated="true"
-            android:name=".application.BlockchainAppSampleApplication">
+            android:name=".application.BlockchainAppSampleApplication"
+    >
         <activity android:name=".blockchainstats.ui.BlockchainStatsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

@@ -80,7 +80,7 @@ class BlockchainStatsFragment : BaseFragment() {
                 val iterator = chartPointsCon.iterator()
                 while (iterator.hasNext()) {
                     val chartPoint = iterator.next()
-                    val x = chartPoint.x.toFloatOrNull()
+                    val x = chartPoint.x.toBigIntegerOrNull()
                     val y = chartPoint.y.toFloatOrNull()
                     if (x != null && y != null) {
                         val valueDataEntry = ValueDataEntry(x, y)
@@ -90,7 +90,7 @@ class BlockchainStatsFragment : BaseFragment() {
                 val cartesian = AnyChart.line()
                 cartesian.animation(true)
 
-                cartesian.padding(5.0, 5.0, 5.0, 5.0)
+                cartesian.padding(2.0, 2.0, 2.0, 2.0)
 
                 cartesian.crosshair().enabled(true)
                 cartesian.crosshair()
@@ -100,7 +100,7 @@ class BlockchainStatsFragment : BaseFragment() {
                 cartesian.title(getString(R.string.chart_description))
 
                 cartesian.yAxis(0).title(getString(R.string.chart_title))
-                cartesian.xAxis(0).labels().padding(5.0, 5.0, 5.0, 5.0)
+                cartesian.xAxis(0).labels().padding(2.0, 2.0, 2.0, 2.0)
 
                 cartesian.removeAllSeries()
                 cartesian.data(seriesData)
