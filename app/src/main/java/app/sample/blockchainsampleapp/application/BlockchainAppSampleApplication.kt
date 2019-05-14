@@ -6,6 +6,9 @@ import app.sample.blockchainsampleapp.di.AppModule
 import app.sample.blockchainsampleapp.di.DaggerAppComponent
 import javax.inject.Inject
 
+/*
+* Block chain sample application class
+* */
 
 class BlockchainAppSampleApplication @Inject constructor() : Application() {
 

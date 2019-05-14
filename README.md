@@ -20,7 +20,7 @@ Sample application to fetch and display average USD market price across major bi
 - Steps: 
 1. Download the repository folder.
 2. Open terminal window then execute the following commands:
-```script
+```shell
 unzip BlockchainSampleApp.zip
 cd BlockchainSampleApp
 ./gradlew assembleDevDebug

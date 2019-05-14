@@ -4,6 +4,10 @@ import android.os.Bundle
 import app.sample.blockchainsampleapp.R
 import de.n26.n26blockchain.base.common.view.BaseActivity
 
+/*
+* Block chain stats activity - main activity for sample application
+*
+* */
 class BlockchainStatsActivity : BaseActivity() {
     override fun getLayoutRes(): Int {
         return R.layout.activity_blockchainstats
