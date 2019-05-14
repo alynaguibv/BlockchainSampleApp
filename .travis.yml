@@ -40,4 +40,3 @@ before_script:
 script:
   - ./gradlew clean build --warning-mode all
   - ./gradlew test --warning-mode all
-  - cat /home/travis/build/aserour/BlockchainSampleApp/app/build/reports/lint-results.xml
