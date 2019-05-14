@@ -9,6 +9,12 @@ Sample application to fetch and display average USD market price across major bi
 ![image info](./documentation/img/screenshot_blockchain_stats.jpg)
 
 
+### Architecture overview
+
+- The sample is implemented using (MVVM + Clean Architecture).
+
+![image info](./documentation/img/architecture.png)
+
 ### How to run the sample application locally
 
 - Preconditions: 
