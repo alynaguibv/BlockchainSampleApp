@@ -11,6 +11,7 @@ import io.reactivex.android.plugins.RxAndroidPlugins
 import io.reactivex.disposables.Disposable
 import io.reactivex.internal.schedulers.ExecutorScheduler
 import io.reactivex.plugins.RxJavaPlugins
+import junit.framework.TestCase.assertNull
 import org.junit.Assert
 import org.junit.Assert.assertNotNull
 import org.junit.Before
@@ -89,7 +90,7 @@ class AppUnitTest {
         useCaseHandler.execute(Injection.provideFetchBlockchainStatsUseCase(), requestValue, object :
             UseCase.UseCaseCallback<FetchBlockchainStatsUseCase.ResponseValue> {
             override fun onSuccess(response: FetchBlockchainStatsUseCase.ResponseValue) {
-                assertNotNull(response.chartPoints)
+                assertNull(response.chartPoints)
             }
 
             override fun onError(t: Throwable) {
