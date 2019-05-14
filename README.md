@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/alynaguibv/BlockchainSampleApp.svg?branch=master)](https://travis-ci.org/alynaguibv/BlockchainSampleApp)
 
 
-## Block chain application 
+## Block chain sample application 
  
 ### Description
 Sample application to fetch and display average USD market price across major bitcoin exchanges. 
@@ -11,9 +11,21 @@ Sample application to fetch and display average USD market price across major bi
 
 ### Architecture overview
 
-- The sample is implemented using (MVVM + Clean Architecture).
+- The sample is implemented using (MVVM + Clean Architecture), each module is implemented as a standalone component then get included into the main application.
 
 ![image info](./documentation/img/architecture.png)
+
+#### MVVM — Model View ViewModel
+- MVVM is one of the (clean) architectures that achieves separation of concerns.
+
+#### Presentation layer - ViewModel 
+- ViewModels shouldn’t know anything about Android. This improves testability, leak safety and modularity. A general rule of thumb is to make sure there are no android.*
+
+#### Domain Layer
+- Business rules here: all the logic happens in this layer. Regarding the android project, you will see all the interactors (use cases) implementations here as well.
+
+#### Repository Layer
+- Repository is an abstraction layer, where you set a contract to be implemented later by the data sources whether these data sources are local data sources or remote data sources.
 
 ### How to run the sample application locally
 
