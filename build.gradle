@@ -7,8 +7,12 @@ buildscript {
         google()
         jcenter()
         maven { url "https://jitpack.io" }
+        maven {
+            url 'http://storage.googleapis.com/r8-releases/raw'
+        }
     }
     dependencies {
+        classpath 'com.android.tools:r8:1.5.24'
         classpath 'com.android.tools.build:gradle:3.4.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
@@ -21,6 +25,9 @@ allprojects {
         google()
         jcenter()
         maven { url "https://jitpack.io" }
+        maven {
+            url 'http://storage.googleapis.com/r8-releases/raw'
+        }
     }
 }
 
